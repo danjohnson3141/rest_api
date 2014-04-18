@@ -1,0 +1,1 @@
+rails g migration add_evanta_access_to_users alt_email:string first_name:string{100} last_name:string{100} title:string organization_name:string bio:text region:string{100} industry_id:integer:index photo:string user_role_id:integer:index created_by:integer:index updated_by:integer:index

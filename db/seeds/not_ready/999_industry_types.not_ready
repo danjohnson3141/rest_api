@@ -1,0 +1,35 @@
+if IndustryType.count == 0
+  puts 'Seeding industry_types table...'
+  industry_types = IndustryType.create([
+    {:name => 'N/A'}, 
+    {:name => 'Aerospace'},
+    {:name => 'Agriculture'},
+    {:name => 'Automotive'},
+    {:name => 'Business Services'},
+    {:name => 'Communications'},
+    {:name => 'Computers'},
+    {:name => 'Electronics'},
+    {:name => 'Software Manufacturer'},
+    {:name => 'Systems/Network Integrator'},
+    {:name => 'Web Services Provider'},
+    {:name => 'Consultants'},
+    {:name => 'Education'},
+    {:name => 'Engineering/Construction'},
+    {:name => 'Financial Services'},
+    {:name => 'Government'},
+    {:name => 'Insurance'},
+    {:name => 'Legal'},
+    {:name => 'Manufacturing'},
+    {:name => 'Marketing'},
+    {:name => 'Media'},
+    {:name => 'Research'},
+    {:name => 'Healthcare/Pharma'},
+    {:name => 'Oil/Gas/Mining'},
+    {:name => 'Real Estate'},
+    {:name => 'Retail'},
+    {:name => 'Transportation/Distribution'},
+    {:name => 'Travel/Entertainment'},
+    {:name => 'Utility'},
+    {:name => 'Non-Profit'}
+  ])
+end

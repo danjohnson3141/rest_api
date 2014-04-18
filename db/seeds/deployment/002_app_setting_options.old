@@ -1,0 +1,906 @@
+require "./db/seed_data"
+
+data = [
+  { :id => 1,
+    :name => 'Main – Sponsors section & App banner ads',
+    :description => 'App Sponsor',
+    :app_setting_type_id => 1
+  },  {
+    :id => 2,
+    :name => 'Main – Group nav section',
+    :description => 'Group',
+    :app_setting_type_id => 1
+  },  {
+    :id => 3,
+    :name => 'Main – Group nav section',
+    :description => 'Group',
+    :app_setting_type_id => 4
+  },  {
+    :id => 4,
+    :name => 'Can See Public/Private groups you are not a member of (you can always see those you are a part of)',
+    :description => 'Group',
+    :app_setting_type_id => 1
+  },  {
+    :id => 5,
+    :name => 'Can See Public/Private groups you are not a member of (you can always see those you are a part of)',
+    :description => 'Group',
+    :app_setting_type_id => 4
+  },  {
+    :id => 6,
+    :name => 'Can Join groups',
+    :description => 'Group',
+    :app_setting_type_id => 1
+  },  {
+    :id => 7,
+    :name => 'Can Join groups',
+    :description => 'Group',
+    :app_setting_type_id => 4
+  },  {
+    :id => 8,
+    :name => 'Can create group',
+    :description => 'Group',
+    :app_setting_type_id => 1
+  },  {
+    :id => 9,
+    :name => 'Can create group',
+    :description => 'Group',
+    :app_setting_type_id => 4
+  },  {
+    :id => 10,
+    :name => 'User\'s can leave groups',
+    :description => 'Group',
+    :app_setting_type_id => 1
+  },  {
+    :id => 11,
+    :name => 'User\'s can leave group',
+    :description => 'Group',
+    :app_setting_type_id => 3
+  },  {
+    :id => 12,
+    :name => 'User\'s can leave groups',
+    :description => 'Group',
+    :app_setting_type_id => 4
+  },  {
+    :id => 13,
+    :name => 'View Event – Attendees (Group member list)',
+    :description => 'Member List',
+    :app_setting_type_id => 1
+  },  {
+    :id => 14,
+    :name => 'View Event – Attendees (Group member list)',
+    :description => 'Member List',
+    :app_setting_type_id => 2
+  },  {
+    :id => 15,
+    :name => 'View Event – Attendees (Group member list)',
+    :description => 'Member List',
+    :app_setting_type_id => 3
+  },  {
+    :id => 16,
+    :name => 'View Event – Attendees (Group member list)',
+    :description => 'Member List',
+    :app_setting_type_id => 4
+  },  {
+    :id => 17,
+    :name => 'Show me on attendee/member lists',
+    :description => 'Member List',
+    :app_setting_type_id => 4
+  },  {
+    :id => 18,
+    :name => 'Show me on attendee/member lists',
+    :description => 'Member List',
+    :app_setting_type_id => 5
+  },  {
+    :id => 19,
+    :name => 'At beginning of the event, switch "attendee" list to show only people marked "attended"',
+    :description => 'Member List',
+    :app_setting_type_id => 1
+  },  {
+    :id => 20,
+    :name => 'At beginning of the event, switch "attendee" list to show only people marked "attended"',
+    :description => 'Member List',
+    :app_setting_type_id => 2
+  },  {
+    :id => 21,
+    :name => 'Has Profile (if disabled, user is read-only, invisible)',
+    :description => 'Profile',
+    :app_setting_type_id => 1
+  },  {
+    :id => 22,
+    :name => 'Has Profile (if disabled, user is read-only, invisible)',
+    :description => 'Profile',
+    :app_setting_type_id => 4
+  },  {
+    :id => 23,
+    :name => 'Can View profiles of other Users',
+    :description => 'Profile',
+    :app_setting_type_id => 1
+  },  {
+    :id => 24,
+    :name => 'Can View profiles of other Users',
+    :description => 'Profile',
+    :app_setting_type_id => 4
+  },  {
+    :id => 25,
+    :name => 'Can edit profile',
+    :description => 'Profile',
+    :app_setting_type_id => 1
+  },  {
+    :id => 26,
+    :name => 'Can edit profile',
+    :description => 'Profile',
+    :app_setting_type_id => 4
+  },  {
+    :id => 27,
+    :name => 'Users – Hide Summary count of Posts from user profile view/left nav',
+    :description => 'Profile',
+    :app_setting_type_id => 1
+  },  {
+    :id => 28,
+    :name => 'Users – Hide Summary count of Posts from user profile view/left nav',
+    :description => 'Profile',
+    :app_setting_type_id => 4
+  },  {
+    :id => 29,
+    :name => 'Users – Hide Summary count of Posts from user profile view/left nav',
+    :description => 'Profile',
+    :app_setting_type_id => 5
+  },  {
+    :id => 30,
+    :name => 'Users – Hide Summary count of Likes from user profile view/left nav',
+    :description => 'Profile',
+    :app_setting_type_id => 1
+  },  {
+    :id => 31,
+    :name => 'Users – Hide Summary count of Likes from user profile view/left nav',
+    :description => 'Profile',
+    :app_setting_type_id => 4
+  },  {
+    :id => 32,
+    :name => 'Users – Hide Summary count of Likes from user profile view/left nav',
+    :description => 'Profile',
+    :app_setting_type_id => 5
+  },  {
+    :id => 33,
+    :name => 'Users – Hide Summary count of Connections from user profile view/left nav',
+    :description => 'Profile',
+    :app_setting_type_id => 1
+  },  {
+    :id => 34,
+    :name => 'Users – Hide Summary count of Connections from user profile view/left nav',
+    :description => 'Profile',
+    :app_setting_type_id => 4
+  },  {
+    :id => 35,
+    :name => 'Users – Hide Summary count of Connections from user profile view/left nav',
+    :description => 'Profile',
+    :app_setting_type_id => 5
+  },  {
+    :id => 36,
+    :name => 'Has wall',
+    :description => 'Wall',
+    :app_setting_type_id => 1
+  },  {
+    :id => 37,
+    :name => 'Has wall',
+    :description => 'Wall',
+    :app_setting_type_id => 4
+  },  {
+    :id => 38,
+    :name => 'My connections can see my Wall (Recent Activity/Posts/Comments/Likes)',
+    :description => 'Wall',
+    :app_setting_type_id => 5
+  },  {
+    :id => 39,
+    :name => 'My connections can write on my wall',
+    :description => 'Wall',
+    :app_setting_type_id => 5
+  },  {
+    :id => 40,
+    :name => 'Post to my wall when I update my Title or Organization',
+    :description => 'Wall',
+    :app_setting_type_id => 5
+  },  {
+    :id => 41,
+    :name => 'Main – Messages',
+    :description => 'Message',
+    :app_setting_type_id => 1
+  },  {
+    :id => 42,
+    :name => 'Main – Messages',
+    :description => 'Message',
+    :app_setting_type_id => 4
+  },  {
+    :id => 43,
+    :name => 'Can Send Private Messages to other Users',
+    :description => 'Message',
+    :app_setting_type_id => 4
+  },  {
+    :id => 44,
+    :name => 'Can Receive Private Messages',
+    :description => 'Message',
+    :app_setting_type_id => 4
+  },  {
+    :id => 45,
+    :name => 'My Connections can send me private messages',
+    :description => 'Message',
+    :app_setting_type_id => 5
+  },  {
+    :id => 46,
+    :name => 'Allow members to send me private messages',
+    :description => 'Message',
+    :app_setting_type_id => 5
+  },  {
+    :id => 47,
+    :name => 'Users can make Connections',
+    :description => 'Connection',
+    :app_setting_type_id => 1
+  },  {
+    :id => 48,
+    :name => 'Users can make Connections',
+    :description => 'Connection',
+    :app_setting_type_id => 4
+  },  {
+    :id => 49,
+    :name => 'Can connect only on event day* (or lock to only QR code and no ability to connect otherwise) one-way lockdown',
+    :description => 'Connection',
+    :app_setting_type_id => 4
+  },  {
+    :id => 50,
+    :name => 'Allow members to request to add me as a connection',
+    :description => 'Connection',
+    :app_setting_type_id => 5
+  },  {
+    :id => 51,
+    :name => 'Allow members to see my connections',
+    :description => 'Connection',
+    :app_setting_type_id => 5
+  },  {
+    :id => 52,
+    :name => 'Can @Mention in Posts/Comments',
+    :description => '@Mention',
+    :app_setting_type_id => 1
+  },  {
+    :id => 53,
+    :name => 'Can @Mention',
+    :description => '@Mention',
+    :app_setting_type_id => 2
+  },  {
+    :id => 54,
+    :name => 'Can @Mention',
+    :description => '@Mention',
+    :app_setting_type_id => 3
+  },  {
+    :id => 55,
+    :name => 'Can @Mention',
+    :description => '@Mention',
+    :app_setting_type_id => 4
+  },  {
+    :id => 56,
+    :name => 'Allow members to @mention me in posts/comments',
+    :description => '@Mention',
+    :app_setting_type_id => 5
+  },  {
+    :id => 57,
+    :name => 'Main – Notifications (store in table no matter what, unless off completely) ??',
+    :description => 'Notification',
+    :app_setting_type_id => 1
+  },  {
+    :id => 58,
+    :name => 'Main – Notifications (store in table no matter what, unless off completely) ??',
+    :description => 'Notification',
+    :app_setting_type_id => 4
+  },  {
+    :id => 59,
+    :name => 'Apply for network required (otherwise just signup)',
+    :description => 'Security',
+    :app_setting_type_id => 1
+  },  {
+    :id => 60,
+    :name => 'Main – Support link (pre-auth & left nav)',
+    :description => 'Support',
+    :app_setting_type_id => 1
+  },  {
+    :id => 61,
+    :name => 'Main – Search',
+    :description => 'Search',
+    :app_setting_type_id => 1
+  },  {
+    :id => 62,
+    :name => 'Main – Search',
+    :description => 'Search',
+    :app_setting_type_id => 3
+  },  {
+    :id => 63,
+    :name => 'Main – Search',
+    :description => 'Search',
+    :app_setting_type_id => 4
+  },  {
+    :id => 64,
+    :name => 'Can search people',
+    :description => 'Search',
+    :app_setting_type_id => 1
+  },  {
+    :id => 65,
+    :name => 'Can search people',
+    :description => 'Search',
+    :app_setting_type_id => 3
+  },  {
+    :id => 66,
+    :name => 'Can search people',
+    :description => 'Search',
+    :app_setting_type_id => 4
+  },  {
+    :id => 67,
+    :name => 'Can search content',
+    :description => 'Search',
+    :app_setting_type_id => 1
+  },  {
+    :id => 68,
+    :name => 'Can search content',
+    :description => 'Search',
+    :app_setting_type_id => 3
+  },  {
+    :id => 69,
+    :name => 'Can search content',
+    :description => 'Search',
+    :app_setting_type_id => 4
+  },  {
+    :id => 70,
+    :name => 'Can search groups/events',
+    :description => 'Search',
+    :app_setting_type_id => 1
+  },  {
+    :id => 71,
+    :name => 'Can search groups/events',
+    :description => 'Search',
+    :app_setting_type_id => 3
+  },  {
+    :id => 72,
+    :name => 'Can search groups/events',
+    :description => 'Search',
+    :app_setting_type_id => 4
+  },  {
+    :id => 73,
+    :name => 'Can Create a Post',
+    :description => 'Post',
+    :app_setting_type_id => 1
+  },  {
+    :id => 74,
+    :name => 'Can Create a Post',
+    :description => 'Post',
+    :app_setting_type_id => 2
+  },  {
+    :id => 75,
+    :name => 'Can Create a Post',
+    :description => 'Post',
+    :app_setting_type_id => 3
+  },  {
+    :id => 76,
+    :name => 'Can Create a Post',
+    :description => 'Post',
+    :app_setting_type_id => 4
+  },  {
+    :id => 77,
+    :name => 'Can post articles (upgraded version of a post - is blogger)',
+    :description => 'Post',
+    :app_setting_type_id => 1
+  },  {
+    :id => 78,
+    :name => 'Can post articles',
+    :description => 'Post',
+    :app_setting_type_id => 4
+  },  {
+    :id => 79,
+    :name => 'Users can add attachments/photos',
+    :description => 'Post',
+    :app_setting_type_id => 1
+  },  {
+    :id => 80,
+    :name => 'Users can add attachments/photos',
+    :description => 'Post',
+    :app_setting_type_id => 2
+  },  {
+    :id => 81,
+    :name => 'Users can add attachments/photos',
+    :description => 'Post',
+    :app_setting_type_id => 3
+  },  {
+    :id => 82,
+    :name => 'Users can add attachments/photos',
+    :description => 'Post',
+    :app_setting_type_id => 4
+  },  {
+    :id => 83,
+    :name => 'Users – Can Edit Posts',
+    :description => 'Post',
+    :app_setting_type_id => 1
+  },  {
+    :id => 84,
+    :name => 'Users – Can Edit Posts',
+    :description => 'Post',
+    :app_setting_type_id => 4
+  },  {
+    :id => 85,
+    :name => 'Show warning when a user edits a post w/ comments',
+    :description => 'Post',
+    :app_setting_type_id => 1
+  },  {
+    :id => 86,
+    :name => 'Show warning when a user edits a post w/ comments',
+    :description => 'Post',
+    :app_setting_type_id => 4
+  },  {
+    :id => 87,
+    :name => 'Show warning when a user edits a post w/o comments',
+    :description => 'Post',
+    :app_setting_type_id => 1
+  },  {
+    :id => 88,
+    :name => 'Show warning when a user edits a post w/o comments',
+    :description => 'Post',
+    :app_setting_type_id => 4
+  },  {
+    :id => 89,
+    :name => 'Users – Can Delete their own Posts',
+    :description => 'Post',
+    :app_setting_type_id => 1
+  },  {
+    :id => 90,
+    :name => 'Users – Can Delete their own Posts',
+    :description => 'Post',
+    :app_setting_type_id => 4
+  },  {
+    :id => 91,
+    :name => 'Show warning when a user deletes a post w/ comments',
+    :description => 'Post',
+    :app_setting_type_id => 1
+  },  {
+    :id => 92,
+    :name => 'Show warning when a user deletes a post w/ comments',
+    :description => 'Post',
+    :app_setting_type_id => 4
+  },  {
+    :id => 93,
+    :name => 'Show warning when a user deletes a post w/o comments',
+    :description => 'Post',
+    :app_setting_type_id => 1
+  },  {
+    :id => 94,
+    :name => 'Show warning when a user deletes a post w/o comments',
+    :description => 'Post',
+    :app_setting_type_id => 4
+  },  {
+    :id => 95,
+    :name => 'Users can Comment (Post/Session)',
+    :description => 'Comment',
+    :app_setting_type_id => 1
+  },  {
+    :id => 96,
+    :name => 'Users can Comment (Post/Session)',
+    :description => 'Comment',
+    :app_setting_type_id => 2
+  },  {
+    :id => 97,
+    :name => 'Users can Comment (Post/Session)',
+    :description => 'Comment',
+    :app_setting_type_id => 3
+  },  {
+    :id => 98,
+    :name => 'Users can Comment (Post/Session)',
+    :description => 'Comment',
+    :app_setting_type_id => 4
+  },  {
+    :id => 99,
+    :name => 'Users can add attachments/photos to a comment',
+    :description => 'Comment',
+    :app_setting_type_id => 1
+  },  {
+    :id => 100,
+    :name => 'Users can add attachments/photos to a comment',
+    :description => 'Comment',
+    :app_setting_type_id => 2
+  },  {
+    :id => 101,
+    :name => 'Users can add attachments/photos to a comment',
+    :description => 'Comment',
+    :app_setting_type_id => 3
+  },  {
+    :id => 102,
+    :name => 'Users can add attachments/photos to a comment',
+    :description => 'Comment',
+    :app_setting_type_id => 4
+  },  {
+    :id => 103,
+    :name => 'Users – Can Edit your comments',
+    :description => 'Comment',
+    :app_setting_type_id => 1
+  },  {
+    :id => 104,
+    :name => 'Users – Can Edit your comments',
+    :description => 'Comment',
+    :app_setting_type_id => 4
+  },  {
+    :id => 105,
+    :name => 'Users – Can Delete their comments',
+    :description => 'Comment',
+    :app_setting_type_id => 1
+  },  {
+    :id => 106,
+    :name => 'Users – Can Delete their comments',
+    :description => 'Comment',
+    :app_setting_type_id => 4
+  },  {
+    :id => 107,
+    :name => 'Delete Comments - show warning',
+    :description => 'Comment',
+    :app_setting_type_id => 1
+  },  {
+    :id => 108,
+    :name => 'Delete Comments - show warning',
+    :description => 'Comment',
+    :app_setting_type_id => 4
+  },  {
+    :id => 109,
+    :name => 'Users can Like (Post/Session)',
+    :description => 'Like',
+    :app_setting_type_id => 1
+  },  {
+    :id => 110,
+    :name => 'Users can Like (Post/Session)',
+    :description => 'Like',
+    :app_setting_type_id => 2
+  },  {
+    :id => 111,
+    :name => 'Users can Like (Post/Session)',
+    :description => 'Like',
+    :app_setting_type_id => 3
+  },  {
+    :id => 112,
+    :name => 'Users can Like (Post/Session)',
+    :description => 'Like',
+    :app_setting_type_id => 4
+  },  {
+    :id => 113,
+    :name => 'Can view a Post\'s Likes list',
+    :description => 'Like',
+    :app_setting_type_id => 1
+  },  {
+    :id => 114,
+    :name => 'Can view a Post\'s Likes list',
+    :description => 'Like',
+    :app_setting_type_id => 4
+  },  {
+    :id => 115,
+    :name => 'Can view attachments (Media) [Posts, profiles, sponsor org pages, Comments]',
+    :description => 'Media',
+    :app_setting_type_id => 4
+  },  {
+    :id => 116,
+    :name => 'I want to receive the weekly newsletter',
+    :description => 'Email',
+    :app_setting_type_id => 4
+  },  {
+    :id => 117,
+    :name => 'I want to receive the weekly newsletter',
+    :description => 'Email',
+    :app_setting_type_id => 5
+  },  {
+    :id => 118,
+    :name => 'I want to receive my weekly feed digest',
+    :description => 'Email',
+    :app_setting_type_id => 4
+  },  {
+    :id => 119,
+    :name => 'I want to receive my weekly feed digest',
+    :description => 'Email',
+    :app_setting_type_id => 5
+  },  {
+    :id => 120,
+    :name => 'I want to receive my daily feed digest (content & notifications)',
+    :description => 'Email',
+    :app_setting_type_id => 4
+  },  {
+    :id => 121,
+    :name => 'I want to receive my daily feed digest (content & notifications)',
+    :description => 'Email',
+    :app_setting_type_id => 5
+  },  {
+    :id => 122,
+    :name => 'Email me when I receive a new connection request – in digest so default No',
+    :description => 'Email',
+    :app_setting_type_id => 5
+  },  {
+    :id => 123,
+    :name => 'Email me when I receive a new Private Message – in digest so default No',
+    :description => 'Email',
+    :app_setting_type_id => 5
+  },  {
+    :id => 124,
+    :name => 'Email me when Requests to join my private group(s) – in digest so default No',
+    :description => 'Email',
+    :app_setting_type_id => 5
+  },  {
+    :id => 125,
+    :name => 'Main – Events section',
+    :description => 'Event',
+    :app_setting_type_id => 1
+  },  {
+    :id => 126,
+    :name => 'Main – Events section',
+    :description => 'Event',
+    :app_setting_type_id => 4
+  },  {
+    :id => 127,
+    :name => 'Event has splash page (sponsor or not)',
+    :description => 'Event',
+    :app_setting_type_id => 2
+  },  {
+    :id => 128,
+    :name => 'Can Follow Event',
+    :description => 'Event',
+    :app_setting_type_id => 1
+  },  {
+    :id => 129,
+    :name => 'Combine Past & Upcoming Events',
+    :description => 'Event',
+    :app_setting_type_id => 1
+  },  {
+    :id => 130,
+    :name => 'Allow members to see events I\'m registered for or have attended in the past',
+    :description => 'Event',
+    :app_setting_type_id => 5
+  },  {
+    :id => 131,
+    :name => 'Event - Turn on Today\'s Event Callout',
+    :description => 'Event',
+    :app_setting_type_id => 1
+  },  {
+    :id => 132,
+    :name => 'Event - Turn on Today\'s Event Callout',
+    :description => 'Event',
+    :app_setting_type_id => 2
+  },  {
+    :id => 133,
+    :name => 'Event - Info',
+    :description => 'Event',
+    :app_setting_type_id => 1
+  },  {
+    :id => 134,
+    :name => 'Event - Info',
+    :description => 'Event',
+    :app_setting_type_id => 2
+  },  {
+    :id => 135,
+    :name => 'Can view Events you are not a part of as a link',
+    :description => 'Event',
+    :app_setting_type_id => 1
+  },  {
+    :id => 136,
+    :name => 'Can view Events you are not a part of as a link',
+    :description => 'Event',
+    :app_setting_type_id => 4
+  },  {
+    :id => 137,
+    :name => 'Event – Sponsors',
+    :description => 'Event Sponsor',
+    :app_setting_type_id => 1
+  },  {
+    :id => 138,
+    :name => 'Event – Sponsors',
+    :description => 'Event Sponsor',
+    :app_setting_type_id => 2
+  },  {
+    :id => 139,
+    :name => 'Event – Sponsors',
+    :description => 'Event Sponsor',
+    :app_setting_type_id => 4
+  },  {
+    :id => 140,
+    :name => 'Event – Sessions',
+    :description => 'Session',
+    :app_setting_type_id => 1
+  },  {
+    :id => 141,
+    :name => 'Event – Sessions',
+    :description => 'Session',
+    :app_setting_type_id => 2
+  },  {
+    :id => 142,
+    :name => 'Event – Sessions',
+    :description => 'Session',
+    :app_setting_type_id => 4
+  },  {
+    :id => 143,
+    :name => 'Event – Speakers',
+    :description => 'Speaker',
+    :app_setting_type_id => 1
+  },  {
+    :id => 144,
+    :name => 'Event – Speakers',
+    :description => 'Speaker',
+    :app_setting_type_id => 2
+  },  {
+    :id => 145,
+    :name => 'Event – Speakers',
+    :description => 'Speaker',
+    :app_setting_type_id => 4
+  },  {
+    :id => 146,
+    :name => 'Event – Notes',
+    :description => 'Notes',
+    :app_setting_type_id => 1
+  },  {
+    :id => 147,
+    :name => 'Event – Notes',
+    :description => 'Notes',
+    :app_setting_type_id => 2
+  },  {
+    :id => 148,
+    :name => 'Event – Notes',
+    :description => 'Notes',
+    :app_setting_type_id => 4
+  },  {
+    :id => 149,
+    :name => 'Event – Bookmarks',
+    :description => 'Bookmark',
+    :app_setting_type_id => 1
+  },  {
+    :id => 150,
+    :name => 'Event – Bookmarks',
+    :description => 'Bookmark',
+    :app_setting_type_id => 2
+  },  {
+    :id => 151,
+    :name => 'Event – Bookmarks',
+    :description => 'Bookmark',
+    :app_setting_type_id => 4
+  },  {
+    :id => 152,
+    :name => 'Event - Evals',
+    :description => 'Evaluation',
+    :app_setting_type_id => 1
+  },  {
+    :id => 153,
+    :name => 'Event - Evals',
+    :description => 'Evaluation',
+    :app_setting_type_id => 2
+  },  {
+    :id => 154,
+    :name => 'Event - Session Evals',
+    :description => 'Evaluation',
+    :app_setting_type_id => 1
+  },  {
+    :id => 155,
+    :name => 'Event - Session Evals',
+    :description => 'Evaluation',
+    :app_setting_type_id => 2
+  },  {
+    :id => 156,
+    :name => 'Can take session Evaluation',
+    :description => 'Evaluation',
+    :app_setting_type_id => 4
+  },  {
+    :id => 157,
+    :name => 'Can take Event Evaluation(s)',
+    :description => 'Evaluation',
+    :app_setting_type_id => 4
+  },  {
+    :id => 158,
+    :name => 'Event – Leaderboard',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 1
+  },  {
+    :id => 159,
+    :name => 'Event – Leaderboard',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 2
+  },  {
+    :id => 160,
+    :name => 'Event – Leaderboard',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 4
+  },  {
+    :id => 161,
+    :name => 'Show Leaderboard Point counts',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 1
+  },  {
+    :id => 162,
+    :name => 'Show Leaderboard Point counts',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 2
+  },  {
+    :id => 163,
+    :name => 'Show Leaderboard Point counts',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 4
+  },  {
+    :id => 164,
+    :name => 'Can participate in Leaderboard',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 4
+  },  {
+    :id => 165,
+    :name => 'Show Leaderboard Ranks w/o points',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 2
+  },  {
+    :id => 166,
+    :name => 'Show Leaderboard Ranks w/o points',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 4
+  },  {
+    :id => 167,
+    :name => 'Show Leaderboard Rules',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 2
+  },  {
+    :id => 168,
+    :name => 'Show Leaderboard Rules',
+    :description => 'Leaderboard',
+    :app_setting_type_id => 4
+  },  {
+    :id => 169,
+    :name => 'Event – My Schedule',
+    :description => 'My Schedule',
+    :app_setting_type_id => 1
+  },  {
+    :id => 170,
+    :name => 'Event – My Schedule',
+    :description => 'My Schedule',
+    :app_setting_type_id => 2
+  },  {
+    :id => 171,
+    :name => 'Event – My Schedule',
+    :description => 'My Schedule',
+    :app_setting_type_id => 4
+  },  {
+    :id => 172,
+    :name => 'Event – QR',
+    :description => 'QR',
+    :app_setting_type_id => 1
+  },  {
+    :id => 173,
+    :name => 'Event – QR',
+    :description => 'QR',
+    :app_setting_type_id => 2
+  },  {
+    :id => 174,
+    :name => 'Event – QR',
+    :description => 'QR',
+    :app_setting_type_id => 4
+  },  {
+    :id => 175,
+    :name => 'Can QR code scan',
+    :description => 'QR',
+    :app_setting_type_id => 4
+  },  {
+    :id => 176,
+    :name => 'Events/Users can have associated region',
+    :description => 'App',
+    :app_setting_type_id => 1
+  },  {
+    :id => 177,
+    :name => 'Can have associated region',
+    :description => 'Event',
+    :app_setting_type_id => 2
+  },  {
+    :id => 178,
+    :name => 'Can have associated region',
+    :description => 'Profile',
+    :app_setting_type_id => 4
+  },  {
+    :id => 179,
+    :name => 'Can have associated region',
+    :description => 'Profile',
+    :app_setting_type_id => 5
+  }, {
+    :id => 180,
+    :name => 'Members can see the group they are a part of',
+    :description => 'Group',
+    :app_setting_type_id => 3
+  }
+]
+
+SeedData.new('AppSettingOption').load(data)

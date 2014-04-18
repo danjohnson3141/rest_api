@@ -1,0 +1,36 @@
+require "./db/seed_data"
+
+data = []
+20.times do
+  data += [
+    { is_viewed: [true, false].sample,
+      body: Faker::Lorem.paragraph(2) + "\n\n" + Faker::Lorem.paragraph(3),
+      link: Faker::Internet.url,
+      user_id: SeedData.get_random(User).id,
+      group_id: SeedData.get_random(Group).id,
+      created_by: SeedData.get_random(User).id
+    }
+  ]
+  data += [
+    { is_viewed: [true, false].sample,
+      body: Faker::Lorem.paragraph(2) + "\n\n" + Faker::Lorem.paragraph(3),
+      link: Faker::Internet.url,
+      user_id: SeedData.get_random(User).id,
+      post_id: SeedData.get_random(Post).id,
+      created_by: SeedData.get_random(User).id
+    }
+  ]
+  user = SeedData.get_random(User)
+  user_connection = UserConnection.create(sender_user_id: 1, recipient_user: user, creator: user)
+  data += [
+    { is_viewed: [true, false].sample,
+      body: Faker::Lorem.paragraph(2) + "\n\n" + Faker::Lorem.paragraph(3), 
+      link: Faker::Internet.url,
+      user_id: SeedData.get_random(User).id,
+      user_connection_id: user_connection.id,
+      created_by: SeedData.get_random(User).id
+    }
+  ]
+end
+
+SeedData.new('Notification').load(data)

@@ -1,0 +1,1 @@
+class ApiAccessEvanta::PermissionDenied < StandardError; end

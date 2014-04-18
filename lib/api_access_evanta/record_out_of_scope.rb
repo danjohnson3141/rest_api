@@ -1,0 +1,1 @@
+class ApiAccessEvanta::RecordOutOfScope < StandardError; end

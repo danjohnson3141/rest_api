@@ -1,0 +1,15 @@
+# AppLabel.destroy_all
+if AppLabel.count == 0
+  puts 'Seeding app_labels table from app_label_dictionaries...'
+  app_label_dictionaries = AppLabelDictionary.all
+
+  app_label_dictionaries.each do |app_label_dictionary|
+    app_label = {
+      app_label_dictionary_id: app_label_dictionary['id'],
+      label: app_label_dictionary['name'],
+      label_plural: app_label_dictionary['name_plural'],
+      app_language_id: 1
+    }
+    AppLabel.create!(app_label)
+  end
+end
